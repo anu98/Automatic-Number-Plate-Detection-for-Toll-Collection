@@ -30,14 +30,14 @@ class ContourWithData():
         self.intRectWidth = intWidth
         self.intRectHeight = intHeight
 
-    def checkIfContourIsValid(self):                            # this is oversimplified, for a production grade program
-        if self.fltArea < MIN_CONTOUR_AREA: return False        # much better validity checking would be necessary
+    def checkIfContourIsValid(self):                            
+        if self.fltArea < MIN_CONTOUR_AREA: return False        
         return True
 
 ###################################################################################################
 def main():
     allContoursWithData = []                # declare empty lists,
-    validContoursWithData = []              # we will fill these shortly
+    validContoursWithData = []             
 
     try:
         npaClassifications = np.loadtxt("/Users/ayaskant/PycharmProjects/Number_Plate_Recognition/Training_data/classifications.txt", np.float32)                  # read in training classifications
